@@ -1,0 +1,142 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('background-image.png');
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-position: center; 
+}
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+}
+
+.logo {
+    height: 100px;
+    width: auto;   
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 5px 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+main {
+    text-align: center;
+    margin-top: 100px;
+}
+
+section {
+    margin: 50px 0;
+}
+
+h1 {
+    font-size: 2em;
+    animation: fall 2s ease-in-out;
+    color: rgb(0, 0, 0); 
+}
+
+p {
+    font-size: 1.2em;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.content-with-images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+}
+
+.content-with-images img.side-image {
+    width: 300px;
+    height: auto;
+    margin: 0 20px;
+}
+
+.content-with-images div {
+    max-width: 400px;
+}
+
+
+.small-image {
+    width: 300px; 
+    height: auto; 
+    margin: 20px 0; 
+}
+
+
+#section1 {
+    margin-top:450px;
+}
+
+@media only screen and (max-width: 600px) {
+    header {
+        position: static; /* Zmiana pozycji nagłówka na statyczną, aby skalowanie było poprawne */
+    }
+
+    .logo {
+        height: 80px; /* Dopasowanie rozmiaru logo do mniejszego ekranu */
+    }
+
+    nav {
+        position: static; /* Zmiana pozycji nawigacji na statyczną */
+        margin: 10px; /* Mniejszy margines dla nawigacji */
+    }
+
+    main {
+        margin-top: 50px; /* Mniejszy margines górnego obszaru na treść */
+    }
+
+    .content-with-images {
+        flex-direction: column; /* Zmiana układu na kolumnowy */
+    }
+
+    .content-with-images img.side-image {
+        margin: 20px 0; /* Mniejszy margines dla obrazków */
+    }
+
+    .content-with-images div {
+        max-width: none; /* Zwiększenie maksymalnej szerokości dla treści z obrazkami */
+    }
+
+    #section1 {
+        margin-top: 1200px; /* Dostosowanie marginesu dla pierwszej sekcji */
+    }
+    
+}
